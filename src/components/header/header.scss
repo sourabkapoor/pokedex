@@ -1,0 +1,12 @@
+.brandHeader {
+  font-family: pokemon;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 40px;
+    color: yellow;
+    margin: 0;
+    text-shadow: 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue;
+  }
+}

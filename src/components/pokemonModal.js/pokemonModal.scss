@@ -1,0 +1,147 @@
+.pokeModalBody {
+  background: radial-gradient(circle, rgba(174,232,238,1) 0%, rgba(239,247,139,1) 100%); 
+  max-width: 60%;
+  margin: 5% auto;
+  border: 12px solid red;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .pokeName {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .pokeImg {
+    width: 30%;
+  }
+  
+  .pokeInfoContr {
+    width: 70%;
+
+    .pokemonTypeContr {
+      justify-content: start;
+      align-items: center;
+
+      .statHeading {
+        margin: 0 8px 0 0;
+        font-size: 12px;
+      }
+
+      p {
+        font-size: 11px;
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  .pokePhyicalStat {
+    margin: 5px 0;
+    p {
+      margin: 0 0 5px;
+      font-size: 12px;
+      font-weight: 600;
+
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .pokeStatOuterContr {
+    display: flex;
+    align-items: flex-start;
+
+    h6 {
+      font-size: 12px;
+      width: max-content;
+    }
+    
+    .pokeStatContr {
+      flex-wrap: wrap;
+      width: 100%;
+  
+      .pokeStatSubContr {
+        margin: 8px;
+
+        .statName {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .pokeAttcksContr {
+    display: flex;
+    margin-bottom: 15px;
+
+    .statHeading {
+      margin: 0;
+    }
+
+    .pokeAttacksList {
+      width: 100%;
+      margin-left: 5px;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// #####################################################################################
+// ############################### Mobile view #########################################
+// #####################################################################################
+@media screen and (max-width: 800px){
+  .pokeModalBody {
+    max-height: 85vh;
+    overflow: auto;
+    width: 75vw;
+    max-width: unset;
+    justify-content: center;
+
+    .pokeName {
+      margin-bottom: 0;
+    }
+
+    .pokeImg {
+      width: 100%;
+      max-width: 9rem;
+    }
+
+    .pokeInfoContr {
+      width: 100%;
+      margin: 0 8px;
+
+      .pokeStatOuterContr {
+
+        .pokeStatContr {
+          margin: 0;
+
+          .pokeStatSubContr {
+            width: max-content;
+
+            .statCount {
+              font-size: 13px;
+            }
+
+            .statName {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .pokeAttacksList {
+        font-size: 12px;
+      }
+    }
+  }
+}
