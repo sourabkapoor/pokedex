@@ -19,7 +19,7 @@ const Pokemons = () => {
   // use Effect for change in results count
   useEffect(() => {
     getPokemons()
-  }, [PokeStore.pokeCount])
+  }, [PokeStore.pokeCount, PokeStore.resultCount])
 
   // useEffect for serach
   useEffect(() => {
@@ -46,19 +46,13 @@ const Pokemons = () => {
     fetch(constants.POKEMON_BASE_API + PokeStore.resultCount + "&offset=" + PokeStore.pokeCount)
     .then(response => response.json())
     .then(result => {
-      result.results.map((pokemon, index) => {
-        getPokemonData(pokemon.url, result.results.length === index + 1)
-      })
+      return Promise.all(result.results.map((pokemon) => {
+        return fetch(pokemon.url).then(data => data.json())
+      }))
     })
-  }
-
-  function getPokemonData(pokemonUrl, lastItem) {
-    fetch(pokemonUrl)
-    .then(response => response.json())
-    .then(result => {
-      setPokemons(prevPokemonList =>  [...prevPokemonList, result])
-      if(lastItem)
-        setLoading(false)
+    .then(data => {
+      setPokemons(prevPokemonList =>  [...prevPokemonList, ...data])
+      setLoading(false)
     })
   }
 
