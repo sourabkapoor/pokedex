@@ -20,18 +20,18 @@ class PokeStore {
   }
   // Pokemon count updater according to results count
   changePokeCount() {
-    this.pokeCount = this.pokeCount + this.resultCount
+    this.pokeCount = Number(this.pokeCount) + Number(this.resultCount);
   }
 
   // Control the results count to show
   changeResultCount(newResultCount) {
-    this.resultCount = newResultCount
-    this.pokeCount = 0
+    this.resultCount = newResultCount;
+    this.pokeCount = 0;
   }
 
   // Add a new type filter
   addPokeFilter(filterArr) {
-    this.typeFilters = filterArr
+    this.typeFilters = filterArr;
   }
 
   // Remove a type filter
