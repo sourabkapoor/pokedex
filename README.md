@@ -1,5 +1,5 @@
 LIVE PREVIEW AT: 
-https://6278cbdf70c89c7c46e0c5fe--euphonious-starship-44425a.netlify.app/
+https://euphonious-starship-44425a.netlify.app/
 
 # Getting Started with Create React App
 
