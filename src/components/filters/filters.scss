@@ -26,48 +26,12 @@
 
   .resultCountBtn {
     color: yellow;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 1.5;
     font-family: pokemon;
     text-shadow: 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue;
   }
 } 
-
-// .resultCountFilter {
-//   display: flex;
-//   align-items: flex-start;
-//   margin-right: 10px;
-//   max-width: 40%;
-
-//   h6 {
-//     margin: 0;
-//     color: yellow;
-//     font-size: 19px;
-//     line-height: 1.5;
-//     font-family: pokemon;
-//     text-shadow: 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue, 3px 3px 0 blue;
-//   }
-
-//   div {
-//     margin: 0 7px;
-//     color: white;
-//     padding: 4px;
-//     border-radius: 7px;
-//     cursor: pointer;
-
-//     &:hover {
-//       background: white;
-//       color: black;
-//       opacity: 0.8;
-//     }
-//   }
-
-//   .activeFilter {
-//     background: white;
-//     color: black;
-//     opacity: 0.8;
-//   }
-// }
 
 .typeFilterContr {
   display: flex;
