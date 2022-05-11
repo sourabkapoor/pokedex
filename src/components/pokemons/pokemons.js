@@ -30,15 +30,16 @@ const Pokemons = () => {
           return PokeStore.typeFilters.includes(type.type.name)
         })
       })
-  
+
       setFilterPokemons(newFiltrdPokemons)
     }
-    else 
+    else {
       newFiltrdPokemons = pokemonsList.filter((pokemons) => {
         return pokemons.name.toLowerCase().includes(searchStr)
       })
 
-    setFilterPokemons(newFiltrdPokemons)
+      setFilterPokemons(newFiltrdPokemons)
+    }
   }, [pokemonsList, searchStr, PokeStore.typeFilters])
 
   function getPokemons() {

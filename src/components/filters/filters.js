@@ -31,9 +31,9 @@ const Filters = (props) => {
     setPokeResultCount(event.currentTarget);
   }
 
-  function handleClose(e) {
-    if(e.target.innerText !== "")
-      setPokeTypeFilter([...PokeStore.typeFilters, e.target.innerText.toLowerCase()])
+  function handleClose(value) {
+    if(value !== "")
+      setPokeTypeFilter([...PokeStore.typeFilters, value.toLowerCase()])
     setShowPokeType(null);
   }
 
@@ -67,7 +67,7 @@ const Filters = (props) => {
               className="typeMenuItem"
               dense
               key={"pokemonType" + index}
-              onClick={(e) => handleClose(e)}
+              onClick={() => handleClose(pokeType)}
             >
               {pokeType}
             </MenuItem>
